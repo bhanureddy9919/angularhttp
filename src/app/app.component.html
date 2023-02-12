@@ -1,0 +1,18 @@
+<button (click)="getData()" *ngIf="!data">Get Data</button>
+<div *ngIf="data">
+  <br>
+  <br>
+  <table border="2">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>image</th>
+    <tr *ngFor="let product of data">
+      <td>{{product.id}}</td>
+      <td>{{product.title}}</td>
+      <td>{{product.price}}</td>
+      <td><img src={{product.image}} alt="" style="height: 50px;"></td>
+    </tr>
+  </table>
+</div>
+
